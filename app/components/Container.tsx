@@ -4,10 +4,10 @@ import React, { useEffect, useState } from "react";
 import { addDays, format, startOfWeek } from "date-fns";
 
 const Container = () => {
-  const startMonday = startOfWeek(new Date(), { weekStartsOn: 1 });
+  const startMonday = startOfWeek(new Date(), { weekStartsOn: 0 });
 
   const weekDays = Array.from({ length: 7 }, (_, i) =>
-    format(addDays(startMonday, i), "E").charAt(0)
+    format(addDays(startMonday, i), "E")
   );
   const todayDay = format(new Date(), "E");
 
@@ -36,13 +36,13 @@ const Container = () => {
         {weekDays.map((day, index) => (
           <span
             className={`flex justify-center items-center w-10 h-10 rounded-full ${
-              day === todayDay[0]
+              day === todayDay
                 ? "text-white bg-purple-500" // Highlight today
                 : "text-purple-500 bg-zinc-200"
             }`}
             key={index}
           >
-            {day}
+            {day.charAt(0)}
           </span>
         ))}
       </div>

@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Profile from "./components/Profile";
 import Container from "./components/Container";
 import MoodCard from "./components/MoodCard";
+import BottomDock from "./components/BottomDock";
 
 const page = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,6 +31,7 @@ const page = () => {
           <div className="flex justify-center items-center">
             <MoodCard />
           </div>
+          <BottomDock />
         </div>
       )}
     </div>
