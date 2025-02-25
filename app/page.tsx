@@ -26,6 +26,7 @@ const page = () => {
         </div>
       ) : (
         <div className="w-full">
+          
           <Profile />
           <Container />
           <div className="flex justify-center items-center">

@@ -28,7 +28,7 @@ const BottomDock = () => {
       {Docks.flatMap((dock, index) => (
         <div key={index}>
           <Link
-            className="flex font-bold items-center gap-1 rounded-xl border shadow-md p-3 bg-purple-500 text-white hover:bg-white hover:text-purple-500 "
+            className="flex font-bold items-center gap-1 rounded-xl border shadow-md p-3 bg-purple-500 text-white hover:bg-white hover:text-purple-500 hover:transition-all  "
             href={dock.herf}
           >
             {dock.icon}

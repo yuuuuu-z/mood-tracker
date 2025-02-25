@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import BackBtn from "../components/BackBtn";
 
 const page = () => {
   return (
-    <div>History page</div>
-  )
-}
+    <div className="max-w-2xl mx-auto h-screen border-x flex">
+      <div>
+        <BackBtn />
+      </div>
+    </div>
+  );
+};
 
-export default page
+export default page;
