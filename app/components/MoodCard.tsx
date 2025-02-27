@@ -1,9 +1,26 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
 import { Sun } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const MoodCard = () => {
+  const router = useRouter();
+  // Save mood to localStorage
+  const saveMood = (mood: string, message: string) => {
+    const newEntry = { date: new Date().toISOString(), mood, message };
+    const existingEntries = JSON.parse(
+      localStorage.getItem("moodHistory") || "[]"
+    );
+    localStorage.setItem(
+      "moodHistory",
+      JSON.stringify([...existingEntries, newEntry])
+    );
+  };
+
   const [selectedMood, setSelectedMood] = useState<{
     emoji: string;
     label: string;
@@ -19,7 +36,14 @@ const MoodCard = () => {
   const handleSubmit = () => {
     console.log(`Mood: ${selectedMood}, Message: ${message}`);
     setShowModal(false);
-    setMessage(""); // Clear message input after submit
+    toast("Mood Saved ✅", {
+      description: message ? `Note: ${message}` : "No additional notes.",
+      duration: 3000,
+      // action: message ? `Note: ${message}` : "No additional notes.",
+    });
+
+    router.push("/mood_history");
+    setMessage("");
   };
   const moods = [
     { emoji: "😊", label: "Great" },

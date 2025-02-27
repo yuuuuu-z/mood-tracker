@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner";
 
 const poppins = Poppins({
   weight: ["400", "700"], // Specify the weights you need
@@ -22,8 +23,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable}  antialiased`}>
+        <Toaster />
         {children}
-       
       </body>
     </html>
   );
