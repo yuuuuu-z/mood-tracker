@@ -27,7 +27,7 @@ const page = async () => {
         <div className="flex justify-center items-center">
           <MoodCard />
         </div>
-        {/* <BottomDock /> */}
+        <BottomDock />
       </div>
       {/* )} */}
     </div>

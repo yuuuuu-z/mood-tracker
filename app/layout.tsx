@@ -33,7 +33,7 @@ export default function RootLayout({
           {/* <PersistGate loading={null} persistor={persistor}> */}
           {children}
           {/* </PersistGate> */}
-          <BottomDock />
+          
         </Providers>
       </body>
     </html>
