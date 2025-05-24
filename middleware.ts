@@ -3,6 +3,7 @@ import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 const isProtectedRoute = createRouteMatcher([
   "/mood_history(.*)",
   "/sitting(.*)",
+  "/user-profile(.*)",
 ]);
 
 export default clerkMiddleware(async (auth, req) => {

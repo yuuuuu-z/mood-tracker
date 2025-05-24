@@ -41,11 +41,11 @@ const Profile = async () => {
           </SignedIn>
         </div>
 
-        {isUser && (
+        {/* {isUser && (
           <div className="flex pl-3">
             <UserButton />
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );
