@@ -22,7 +22,7 @@ export default function SuccessPage() {
           new feature. 🙏✨
         </p>
 
-        <Button >View Invoice</Button>
+        <Button>View Invoice</Button>
       </div>
     </div>
   );
