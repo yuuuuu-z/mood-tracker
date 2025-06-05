@@ -14,16 +14,20 @@ export default function Checkout({ priceId }: { priceId: string }) {
   const [loading, setLoading] = useState(false);
 
   const handleCheckout = async () => {
-    setLoading(true);
-    const data = JSON.parse(await checkout(email, priceId, location.origin));
+    try {
+      setLoading(true);
+      const data = JSON.parse(await checkout(email, priceId, location.origin + "/success"));
 
-    const stripe = await loadStripe(
-      process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!
-    );
-    const res = await stripe?.redirectToCheckout({
-      sessionId: data.id,
-    });
-    setLoading(false);
+      const stripe = await loadStripe(
+        process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!
+      );
+      const res = await stripe?.redirectToCheckout({
+        sessionId: data.id,
+      });
+      setLoading(false);
+    } catch (error) {
+
+    }
   };
   return (
     <Button

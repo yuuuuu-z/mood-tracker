@@ -1,9 +1,5 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-<<<<<<< HEAD
   "/upgrade/page": "app/upgrade/page.js",
-=======
-  "/sitting/page": "app/sitting/page.js",
->>>>>>> 3fc414c (working)
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/success/page": "app/success/page.js"
 }

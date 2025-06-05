@@ -11,38 +11,21 @@
       "static/chunks/main-app.js",
       "static/chunks/app/loading.js"
     ],
+    "/success/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/success/page.js"
+    ],
     "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/page.css",
       "static/chunks/app/page.js"
     ],
-<<<<<<< HEAD
     "/upgrade/page": [
-=======
-    "/mood_history/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/mood_history/page.js"
-    ],
-    "/sitting/page": [
->>>>>>> 3fc414c (working)
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/upgrade/page.js"
-    ],
-    "/_not-found/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-<<<<<<< HEAD
-=======
-      "static/chunks/app/user-profile/page.js"
-    ],
-    "/_not-found/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
->>>>>>> 3fc414c (working)
-      "static/chunks/app/_not-found/page.js"
     ]
   }
 }
