@@ -2,7 +2,6 @@ import { CircleCheck } from "lucide-react";
 import BackBtn from "../components/BackBtn";
 import { ConfettiDemo } from "../components/ConfettiDemo";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 export default function SuccessPage() {
   return (
@@ -18,8 +17,7 @@ export default function SuccessPage() {
         </div>
 
         <p>
-          Thank you for your payment. Now you can go to the homepage & discover
-          new feature. 🙏✨
+          Thank you for your payment. Now you can discover new feature. 🙏✨
         </p>
 
         <Button>View Invoice</Button>
