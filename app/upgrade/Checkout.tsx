@@ -16,7 +16,9 @@ export default function Checkout({ priceId }: { priceId: string }) {
   const handleCheckout = async () => {
     try {
       setLoading(true);
-      const data = JSON.parse(await checkout(email, priceId, location.origin + "/success"));
+      const data = JSON.parse(
+        await checkout(email, priceId, location.origin + "/success")
+      );
 
       const stripe = await loadStripe(
         process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!
@@ -25,9 +27,7 @@ export default function Checkout({ priceId }: { priceId: string }) {
         sessionId: data.id,
       });
       setLoading(false);
-    } catch (error) {
-
-    }
+    } catch (error) {}
   };
   return (
     <Button

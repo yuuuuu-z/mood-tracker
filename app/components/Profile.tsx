@@ -24,6 +24,7 @@ const Profile = async () => {
   });
 
   const isUser = await currentUser();
+  console.log("is user : ", isUser);
 
   return (
     <div className="flex items-center justify-between px-5 py-3">

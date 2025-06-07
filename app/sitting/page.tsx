@@ -2,11 +2,11 @@ import React from "react";
 import BackBtn from "../components/BackBtn";
 import { currentUser } from "@clerk/nextjs/server";
 import { UserButton } from "@clerk/nextjs";
-import { Edit} from "lucide-react";
-
+import { Edit } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SignOutBtn from "../components/SignOut";
 import Link from "next/link";
+import CountryInfo from "../components/CountryInfo";
 
 const page = async () => {
   const userButtonAppearance = {
@@ -43,6 +43,13 @@ const page = async () => {
             </Button>
           </div>
         ) : null}
+      </div>
+
+      <div className="flex  gap-3 justify-center my-3">
+        <Button className="p-6 ">Account Type : Free</Button>
+        <Button className="p-6 ">
+          <CountryInfo />
+        </Button>
       </div>
       <div>
         <SignOutBtn />
