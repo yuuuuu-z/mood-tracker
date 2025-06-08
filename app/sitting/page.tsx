@@ -45,9 +45,17 @@ const page = async () => {
         ) : null}
       </div>
 
-      <div className="flex  gap-3 justify-center my-3">
-        <Button className="p-6 ">Account Type : Free</Button>
-        <Button className="p-6 ">
+      <div className="flex justify-center gap-3 p-5 ">
+        <Button
+          className="p-3 md:p-6 border-2 border-purple-500"
+          variant="ghost"
+        >
+          Account Type : Free
+        </Button>
+        <Button
+          className="p-3 md:p-6 border-2 border-purple-500 "
+          variant="ghost"
+        >
           <CountryInfo />
         </Button>
       </div>

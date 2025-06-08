@@ -19,7 +19,7 @@ const CountryInfo = () => {
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
         <span className="relative inline-flex size-3 rounded-full bg-green-600"></span>
       </div>
-      <span>Location : {country}</span>
+      <span >Location : {country}</span>
     </div>
   );
 };
