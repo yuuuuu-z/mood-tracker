@@ -2,7 +2,14 @@ import React from "react";
 import BackBtn from "../components/BackBtn";
 import { currentUser } from "@clerk/nextjs/server";
 import { UserButton } from "@clerk/nextjs";
-import { Edit } from "lucide-react";
+import {
+  Bell,
+  ChevronRight,
+  DraftingCompass,
+  Edit,
+  Globe,
+  ShieldEllipsis,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SignOutBtn from "../components/SignOut";
 import Link from "next/link";
@@ -18,6 +25,29 @@ const page = async () => {
   };
   const isUser = await currentUser();
   const userId = isUser?.id.slice(-5);
+
+  const icons = [
+    {
+      name: "Appearance Preferences",
+      herf: "/appearance",
+      icon: <DraftingCompass />,
+    },
+    {
+      name: "Privacy & Security",
+      herf: "/privacy",
+      icon: <ShieldEllipsis />,
+    },
+    {
+      name: "Notification",
+      herf: "notification",
+      icon: <Bell />,
+    },
+    {
+      name: "Language & Region",
+      herf: "/Language ",
+      icon: <Globe />,
+    },
+  ];
 
   return (
     <div className="max-w-2xl mx-auto h-screen border-x ">
@@ -60,6 +90,26 @@ const page = async () => {
         </Button>
       </div>
       <div>
+        {icons.flatMap((icon, idx) => {
+          return (
+            <div
+              className="flex justify-between  text-sm text-white bg-purple-500 mx-10 p-5  rounded-md mt-5  "
+              key={idx}
+            >
+              <div className="flex items-center gap-3">
+                <span>{icon.icon}</span>
+                <Link href={icon.herf}> {icon.name} </Link>
+              </div>
+              <div>
+                <span>
+                  <ChevronRight />
+                </span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <div className="my-8">
         <SignOutBtn />
       </div>
     </div>
