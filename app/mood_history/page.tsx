@@ -41,7 +41,7 @@ const MoodHistory = () => {
         </div>
 
         {userMoods.length === 0 ? (
-          <p className="text-gray-500">
+          <p className="text-gray-500 dark:text-white">
             No mood entries yet. Track your first mood!
           </p>
         ) : (
@@ -54,14 +54,14 @@ const MoodHistory = () => {
               .map((entry) => (
                 <div
                   key={entry.id}
-                  className="px-2 py-4 border rounded-lg shadow-sm bg-white"
+                  className="px-2 py-4 border rounded-lg shadow-sm bg-white dark:bg-transparent dark:border-white"
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 ">
                     <span className="text-2xl">{entry.emoji}</span>
                     <div className="flex-1">
-                      <div className="flex justify-between items-center">
-                        <span className="font-semibold ">{entry.label}</span>
-                        <span className="text-sm text-gray-500 ">
+                      <div className="flex justify-between items-center ">
+                        <span className="font-semibold  ">{entry.label}</span>
+                        <span className="text-sm text-gray-500 dark:text-white ">
                           {format(
                             new Date(entry.date),
                             "MMM dd, yyyy - h:mm a"
@@ -69,7 +69,9 @@ const MoodHistory = () => {
                         </span>
                       </div>
                       {entry.note && (
-                        <p className="mt-2 text-gray-700">{entry.note}</p>
+                        <p className="mt-2 text-gray-700 dark:text-white">
+                          {entry.note}
+                        </p>
                       )}
                     </div>
                     <Button

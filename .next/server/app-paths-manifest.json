@@ -1,4 +1,7 @@
 {
-  "/sitting/page": "app/sitting/page.js",
-  "/page": "app/page.js"
+  "/mood_history/page": "app/mood_history/page.js",
+  "/upgrade/page": "app/upgrade/page.js",
+  "/page": "app/page.js",
+  "/appearance/page": "app/appearance/page.js",
+  "/sitting/page": "app/sitting/page.js"
 }

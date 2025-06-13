@@ -33,11 +33,6 @@ const page = async () => {
       icon: <DraftingCompass />,
     },
     {
-      name: "Privacy & Security",
-      herf: "/privacy",
-      icon: <ShieldEllipsis />,
-    },
-    {
       name: "Notification",
       herf: "notification",
       icon: <Bell />,
@@ -46,6 +41,11 @@ const page = async () => {
       name: "Language & Region",
       herf: "/Language ",
       icon: <Globe />,
+    },
+    {
+      name: "Privacy & Security",
+      herf: "/privacy",
+      icon: <ShieldEllipsis />,
     },
   ];
 
@@ -109,7 +109,7 @@ const page = async () => {
           );
         })}
       </div>
-      <div className="my-8">
+      <div className="p-5">
         <SignOutBtn />
       </div>
     </div>

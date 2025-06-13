@@ -2,10 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
-import { PersistGate } from "redux-persist/integration/react";
-
-import BottomDock from "./components/BottomDock";
-import { persistor } from "./store/store";
+import { ThemeProvider } from "next-themes";
 
 const poppins = Poppins({
   weight: ["400", "700"],
@@ -26,14 +23,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={poppins.variable}>
+    <html lang="en" className={poppins.variable} suppressHydrationWarning>
       <link rel="manifest" href="/manifest.json" />
       <body className="max-w-2xl mx-auto border-x flex-col justify-center h-screen">
-        <Providers>
-          {/* <PersistGate loading={null} persistor={persistor}> */}
-          {children}
-          {/* </PersistGate> */}
-        </Providers>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Providers>
+            {/* <PersistGate loading={null} persistor={persistor}> */}
+            {children}
+            {/* </PersistGate> */}
+          </Providers>
+        </ThemeProvider>
       </body>
     </html>
   );
