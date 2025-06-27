@@ -13,7 +13,7 @@ const page = async () => {
   await new Promise((resolve) => setTimeout(resolve, 1500));
 
   return (
-    <div>
+    <div className="h-screen">
       <InstallNotice />
       <PwaUpdater />
       <Pwa />

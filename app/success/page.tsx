@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export default function SuccessPage() {
   return (
-    <div>
+    <div className=" h-screen">
       <ConfettiDemo />
       <BackBtn />
       <div className="p-5 border rounded-md mx-5 space-y-5">
