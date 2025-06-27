@@ -17,7 +17,7 @@ export default function Docks() {
   if (!user) return null;
 
   return (
-    <div className="flex justify-center gap-3 py-3">
+    <div className="flex justify-center gap-3 py-3 ">
       {links.map((dock, index) => (
         <Link
           key={index}

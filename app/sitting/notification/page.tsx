@@ -120,7 +120,7 @@ export default function NotificationPage() {
           <div className="px-4 -mt-16 pt-20">
             <div className="flex items-center gap-3 mb-2">
               <div className="p-2 bg-blue-500 rounded-lg">
-                <Bell className="h-6 w-6 text-white" />
+                <Bell className="h-6 w-8 text-white" />
               </div>
               <h1 className="text-3xl font-bold tracking-tight text-gray-900">
                 Notifications
@@ -196,7 +196,7 @@ export default function NotificationPage() {
         </div>
 
         {/* Reminder Time Select */}
-        <Card className="border-0 shadow-lg bg-white/90 relative z-10">
+        <Card className="border-0 shadow-lg bg-white/90 ">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Clock className="h-5 w-5" />
@@ -206,13 +206,15 @@ export default function NotificationPage() {
               Choose when you'd like to receive your daily mood reminders
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-4 ">
             <div className="flex items-center justify-between">
               <div>
                 <h4 className="font-medium">Daily Reminder Time</h4>
                 <p className="text-sm text-muted-foreground">
                   Best time for your mood check-in
                 </p>
+
+                
               </div>
 
               {/* FIXED Select Dropdown */}

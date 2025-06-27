@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={poppins.variable} suppressHydrationWarning>
       <link rel="manifest" href="/manifest.json" />
-      <body className="max-w-2xl mx-auto border-x flex-col justify-center h-screen">
+      <body className="max-w-2xl mx-auto border-x flex-col  ">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Providers>
             {/* <PersistGate loading={null} persistor={persistor}> */}

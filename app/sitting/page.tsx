@@ -67,9 +67,7 @@ const page = async () => {
           </div>
 
           <div className="px-4 -mt-16 pt-20">
-            <h1 className="text-3xl font-bold tracking-tight">
-              Settings
-            </h1>
+            <h1 className="text-3xl font-bold tracking-tight">Settings</h1>
             <p className="text-muted-foreground">
               Manage your account and preferences
             </p>
@@ -107,7 +105,7 @@ const page = async () => {
             </div>
 
             {/* Account Info Badges */}
-            <div className="flex gap-3 mt-6">
+            <div className="flex gap-3 mt-6 text-center">
               <Badge
                 variant="secondary"
                 className="bg-green-100 text-green-800 border-green-200 px-4 py-2"
@@ -119,7 +117,7 @@ const page = async () => {
                 variant="outline"
                 className="border-blue-200 text-blue-700 px-4 py-2"
               >
-                <Globe className="w-3 h-3 mr-1" />
+                <Globe className="w-3 h-3 mr-1  " />
                 <CountryInfo />
               </Badge>
             </div>

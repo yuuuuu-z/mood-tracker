@@ -32,10 +32,35 @@
       "static/chunks/main-app.js",
       "static/chunks/app/sitting/notification/page.js"
     ],
+    "/mood_history/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/mood_history/page.js"
+    ],
+    "/upgrade/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/upgrade/page.js"
+    ],
+    "/user-profile/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/user-profile/page.js"
+    ],
     "/sitting/language/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/sitting/language/page.js"
+    ],
+    "/sitting/privacy/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/sitting/privacy/page.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }

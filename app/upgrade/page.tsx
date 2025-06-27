@@ -58,7 +58,7 @@ export default function Upgradepage() {
     <div className="flex flex-col p-5  ">
       <BackBtn />
       <p className="text-2xl font-bold mt-5">Upgrade Mood Tracker 🎯</p>
-      <div className="h-screen flex flex-col gap-5 my-10  ">
+      <div className="flex flex-col gap-5 my-10  ">
         {prices.flatMap((price, idx) => {
           return (
             <div

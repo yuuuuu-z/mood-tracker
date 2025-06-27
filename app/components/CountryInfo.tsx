@@ -14,11 +14,7 @@ const CountryInfo = () => {
   }, []);
 
   return (
-    <div className="flex items-center ">
-      <div className="relative">
-        {/* <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-        <span className="relative inline-flex size-3 rounded-full bg-green-600"></span> */}
-      </div>
+    <div className="flex items-center justify-center ">
       <span>Location : {country}</span>
     </div>
   );

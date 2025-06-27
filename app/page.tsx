@@ -14,22 +14,16 @@ const page = async () => {
 
   return (
     <div>
-      {/* {isLoading ? ( */}
-
-      {/* ) : ( */}
-      <div className="">
-        <InstallNotice />
-        <PwaUpdater />
-        <Pwa />
-        <Profile />
-        {/* <UserInfo /> */}
-        <Container />
-        <div className="flex justify-center items-center">
-          <MoodCard />
-        </div>
-        <BottomDock />
-      </div>
-      {/* )} */}
+      <InstallNotice />
+      <PwaUpdater />
+      <Pwa />
+      <Profile />
+      {/* <UserInfo /> */}
+      <Container />
+      {/* <div className="flex justify-center items-center "> */}
+      <MoodCard />
+      {/* </div> */}
+      <BottomDock />
     </div>
   );
 };

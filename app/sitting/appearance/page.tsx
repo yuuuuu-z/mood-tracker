@@ -78,7 +78,7 @@ export default function AppearancePage() {
           <div className="px-4 -mt-16 pt-20">
             <div className="flex items-center gap-3 mb-2">
               <div className="p-2 bg-purple-500 rounded-lg">
-                <Palette className="h-7 w-7 text-white" />
+                <Palette className="h-6 w-8 text-white" />
               </div>
               <h1 className="text-3xl font-bold tracking-tight ">Appearance</h1>
             </div>

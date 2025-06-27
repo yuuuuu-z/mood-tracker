@@ -104,7 +104,7 @@ export default function PrivacySecurityPage() {
           <div className="px-4 -mt-16 pt-20">
             <div className="flex items-center gap-3 mb-2">
               <div className="p-2 bg-red-500 rounded-lg">
-                <Shield className="h-6 w-6 text-white" />
+                <Shield className="h-6 w-8 text-white" />
               </div>
               <h1 className="text-3xl font-bold tracking-tight text-gray-900">Privacy & Security</h1>
             </div>
