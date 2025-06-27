@@ -1,1 +1,8 @@
-{}
+{
+  "/page": "app/page.js",
+  "/sitting/language/page": "app/sitting/language/page.js",
+  "/sitting/page": "app/sitting/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/sitting/appearance/page": "app/sitting/appearance/page.js",
+  "/sitting/notification/page": "app/sitting/notification/page.js"
+}

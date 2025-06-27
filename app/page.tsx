@@ -17,7 +17,7 @@ const page = async () => {
       {/* {isLoading ? ( */}
 
       {/* ) : ( */}
-      <div className="w-full h-screen">
+      <div className="">
         <InstallNotice />
         <PwaUpdater />
         <Pwa />

@@ -6,6 +6,4 @@ Mood Tracker is a simple and friendly web app designed to help you keep track of
 
 No complicated setup—just open the app, start tracking, and take a step towards a happier, more mindful you!
 
-Test Demo : (https://mood-tracker-v1.vercel.app/)
-
-// ... existing code ...
+Live Demo : https://mood-tracker-v1.vercel.app/
