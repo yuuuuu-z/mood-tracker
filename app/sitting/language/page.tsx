@@ -85,7 +85,7 @@ export default function LanguageRegionPage() {
           <div className="px-4 -mt-16 pt-20">
             <div className="flex items-center gap-3 mb-2">
               <div className="p-2 bg-green-500 rounded-lg">
-                <Globe className="h-6 w-6 text-white" />
+                <Globe className="h-6 w-8 text-white" />
               </div>
               <h1 className="text-3xl font-bold tracking-tight text-gray-900">
                 Language & Region
@@ -133,7 +133,7 @@ export default function LanguageRegionPage() {
               Choose your preferred language for the mood tracker interface
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          {/* <CardContent>
             <Select
               value={settings.language}
               onValueChange={(value) =>
@@ -154,7 +154,7 @@ export default function LanguageRegionPage() {
                 ))}
               </SelectContent>
             </Select>
-          </CardContent>
+          </CardContent> */}
         </Card>
 
         {/* Region Settings */}
@@ -168,7 +168,7 @@ export default function LanguageRegionPage() {
               Set your region for localized content and mood insights
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          {/* <CardContent>
             <Select
               value={settings.region}
               onValueChange={(value) =>
@@ -189,7 +189,7 @@ export default function LanguageRegionPage() {
                 ))}
               </SelectContent>
             </Select>
-          </CardContent>
+          </CardContent> */}
         </Card>
 
         {/* Timezone Settings */}
@@ -203,7 +203,7 @@ export default function LanguageRegionPage() {
               Ensure accurate timestamps for your mood entries
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          {/* <CardContent>
             <Select
               value={settings.timezone}
               onValueChange={(value) =>
@@ -221,7 +221,7 @@ export default function LanguageRegionPage() {
                 ))}
               </SelectContent>
             </Select>
-          </CardContent>
+          </CardContent> */}
         </Card>
 
         {/* Date Format */}
@@ -235,7 +235,7 @@ export default function LanguageRegionPage() {
               Choose how dates are displayed in your mood tracker
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-4">
+          {/* <CardContent className="space-y-4">
             <Select
               value={settings.dateFormat}
               onValueChange={(value) =>
@@ -267,7 +267,7 @@ export default function LanguageRegionPage() {
               Changes will apply to all dates and timestamps in your mood
               tracker
             </div>
-          </CardContent>
+          </CardContent> */}
         </Card>
       </div>
     </div>

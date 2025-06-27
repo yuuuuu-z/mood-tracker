@@ -157,7 +157,6 @@ const page = async () => {
 
         {/* Sign Out Section */}
         <div className="mt-12">
-          <Separator className="mb-8" />
           <div className="flex justify-center sticky bottom-1 p-2">
             {/* <Button
               variant="destructive"
@@ -167,7 +166,7 @@ const page = async () => {
             </Button> */}
             <SignOutBtn />
           </div>
-          <p className="text-center text-xs text-gray-500 mt-4">
+          <p className="text-center pb-5 text-xs text-gray-500 mt-4">
             You'll need to sign in again to access your mood data
           </p>
         </div>

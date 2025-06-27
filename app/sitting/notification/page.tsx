@@ -25,7 +25,9 @@ import { Separator } from "@/components/ui/separator";
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
+  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -207,34 +209,30 @@ export default function NotificationPage() {
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4 ">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between ">
               <div>
                 <h4 className="font-medium">Daily Reminder Time</h4>
                 <p className="text-sm text-muted-foreground">
                   Best time for your mood check-in
                 </p>
-
-                
               </div>
-
-              {/* FIXED Select Dropdown */}
-              <div className="relative z-[9999]">
+              <div>
                 <Select value={reminderTime} onValueChange={setReminderTime}>
-                  <SelectTrigger className="w-32">
-                    <SelectValue placeholder="Select" />
+                  <SelectTrigger className="w-[120px]">
+                    <SelectValue placeholder="Select reminder time" />
                   </SelectTrigger>
-                  <SelectContent
-                    position="popper"
-                    sideOffset={5}
-                    className="z-[9999] bg-white border shadow-lg"
-                  >
-                    <SelectItem value="morning">Morning</SelectItem>
-                    <SelectItem value="afternoon">Afternoon</SelectItem>
-                    <SelectItem value="evening">Evening</SelectItem>
-                    <SelectItem value="night">Night</SelectItem>
-                  </SelectContent>
+                  {/* <SelectContent position="popper" className="z-50">
+                    <SelectGroup>
+                      <SelectLabel>Reminder Time</SelectLabel>
+                      <SelectItem value="morning">Morning</SelectItem>
+                      <SelectItem value="afternoon">Afternoon</SelectItem>
+                      <SelectItem value="evening">Evening</SelectItem>
+                      <SelectItem value="night">Night</SelectItem>
+                    </SelectGroup>
+                  </SelectContent> */}
                 </Select>
               </div>
+              {/* FIXED Select Dropdown */}
             </div>
 
             <Separator />
