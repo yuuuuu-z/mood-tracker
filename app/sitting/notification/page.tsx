@@ -143,7 +143,7 @@ export default function NotificationPage() {
                   <Smartphone className="h-6 w-6 text-green-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">
+                  <h3 className="font-semibold text-sm md:text-lg text-gray-900">
                     Push Notifications
                   </h3>
                   <p className="text-sm text-gray-600">
@@ -179,7 +179,7 @@ export default function NotificationPage() {
                       <div className="text-white">{setting.icon}</div>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">
+                      <h3 className="font-semibold text-sm text-gray-900 md:text-lg">
                         {setting.title}
                       </h3>
                       <p className="text-sm text-gray-600">

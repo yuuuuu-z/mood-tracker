@@ -22,25 +22,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/sitting/page.js"
     ],
-    "/sitting/appearance/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/sitting/appearance/page.js"
-    ],
     "/sitting/notification/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/sitting/notification/page.js"
     ],
-    "/sitting/language/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/sitting/language/page.js"
-    ],
     "/sitting/privacy/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/sitting/privacy/page.js"
+    ],
+    "/sitting/language/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/sitting/language/page.js"
     ]
   }
 }
