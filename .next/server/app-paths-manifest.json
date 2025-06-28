@@ -1,9 +1,7 @@
 {
-  "/success/page": "app/success/page.js",
   "/sitting/page": "app/sitting/page.js",
+  "/sitting/privacy/page": "app/sitting/privacy/page.js",
+  "/sitting/appearance/page": "app/sitting/appearance/page.js",
   "/sitting/notification/page": "app/sitting/notification/page.js",
-  "/sitting/language/page": "app/sitting/language/page.js",
-  "/upgrade/page": "app/upgrade/page.js",
-  "/mood_history/page": "app/mood_history/page.js",
-  "/page": "app/page.js"
+  "/sitting/language/page": "app/sitting/language/page.js"
 }

@@ -1,35 +1,50 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import BackBtn from "@/app/components/BackBtn"
-import { Shield, Lock, Eye, Download, Trash2, UserCheck, Database, Key } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Switch } from "@/components/ui/switch"
-import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
-import { Alert, AlertDescription } from "@/components/ui/alert"
+import { useEffect, useState } from "react";
+import BackBtn from "@/app/components/BackBtn";
+import {
+  Shield,
+  Lock,
+  Eye,
+  Download,
+  Trash2,
+  UserCheck,
+  Database,
+  Key,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Switch } from "@/components/ui/switch";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 
 export default function PrivacySecurityPage() {
-  const [mounted, setMounted] = useState(false)
+  const [mounted, setMounted] = useState(false);
   const [privacy, setPrivacy] = useState({
     dataEncryption: true,
     anonymousAnalytics: false,
     shareInsights: true,
     biometricLock: false,
     autoLogout: true,
-  })
+  });
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
   const togglePrivacy = (key: string) => {
     setPrivacy((prev) => ({
       ...prev,
       [key]: !prev[key as keyof typeof prev],
-    }))
-  }
+    }));
+  };
 
   const privacySettings = [
     {
@@ -53,7 +68,8 @@ export default function PrivacySecurityPage() {
     {
       id: "shareInsights",
       title: "Personalized Insights",
-      description: "Allow AI analysis of your mood patterns for better recommendations",
+      description:
+        "Allow AI analysis of your mood patterns for better recommendations",
       icon: <Eye className="h-5 w-5" />,
       color: "bg-purple-500",
       enabled: privacy.shareInsights,
@@ -62,7 +78,8 @@ export default function PrivacySecurityPage() {
     {
       id: "biometricLock",
       title: "Biometric App Lock",
-      description: "Use fingerprint or face recognition to secure your mood data",
+      description:
+        "Use fingerprint or face recognition to secure your mood data",
       icon: <Key className="h-5 w-5" />,
       color: "bg-orange-500",
       enabled: privacy.biometricLock,
@@ -77,7 +94,7 @@ export default function PrivacySecurityPage() {
       enabled: privacy.autoLogout,
       recommended: true,
     },
-  ]
+  ];
 
   if (!mounted) {
     return (
@@ -92,11 +109,11 @@ export default function PrivacySecurityPage() {
           </div>
         </div>
       </div>
-    )
+    );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50">
+    <div className="min-h-screen ">
       <div className="max-w-2xl mx-auto px-4 py-6">
         {/* Header */}
         <div className="mb-8">
@@ -106,9 +123,13 @@ export default function PrivacySecurityPage() {
               <div className="p-2 bg-red-500 rounded-lg">
                 <Shield className="h-6 w-8 text-white" />
               </div>
-              <h1 className="text-3xl font-bold tracking-tight text-gray-900">Privacy & Security</h1>
+              <h1 className="text-xl md:text-3xl font-bold tracking-tight">
+                Privacy & Security
+              </h1>
             </div>
-            <p className="text-muted-foreground">Keep your mood data safe and control your privacy</p>
+            <p className="text-muted-foreground">
+              Keep your mood data safe and control your privacy
+            </p>
           </div>
         </div>
 
@@ -116,13 +137,14 @@ export default function PrivacySecurityPage() {
         <Alert className="mb-8 border-green-200 bg-green-50">
           <Shield className="h-4 w-4 text-green-600" />
           <AlertDescription className="text-green-800">
-            Your mood data is secure and encrypted. We never share your personal information.
+            Your mood data is secure and encrypted. We never share your personal
+            information.
           </AlertDescription>
         </Alert>
 
         {/* Privacy Settings */}
         <div className="space-y-4 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 px-2">Privacy Controls</h2>
+          <h2 className="text-xl font-semibold ">Privacy Controls</h2>
 
           {privacySettings.map((setting) => (
             <Card
@@ -131,23 +153,33 @@ export default function PrivacySecurityPage() {
             >
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-2">
                     <div className={`p-3 rounded-xl ${setting.color}`}>
                       <div className="text-white">{setting.icon}</div>
                     </div>
                     <div>
                       <div className="flex items-center gap-2">
-                        <h3 className="font-semibold text-gray-900">{setting.title}</h3>
+                        <h3 className="font-semibold text-gray-900 text-[0.8rem] md:text-lg">
+                          {setting.title}
+                        </h3>
                         {setting.recommended && (
-                          <Badge variant="secondary" className="bg-green-100 text-green-800 text-xs">
+                          <Badge
+                            variant="secondary"
+                            className="bg-green-100 text-green-800 text-xs"
+                          >
                             Recommended
                           </Badge>
                         )}
                       </div>
-                      <p className="text-sm text-gray-600">{setting.description}</p>
+                      <p className="text-[0.65rem] text-gray-600 pr-2 md:text-[0.8rem] ">
+                        {setting.description}
+                      </p>
                     </div>
                   </div>
-                  <Switch checked={setting.enabled} onCheckedChange={() => togglePrivacy(setting.id)} />
+                  <Switch
+                    checked={setting.enabled}
+                    onCheckedChange={() => togglePrivacy(setting.id)}
+                  />
                 </div>
               </CardContent>
             </Card>
@@ -155,13 +187,15 @@ export default function PrivacySecurityPage() {
         </div>
 
         {/* Data Management */}
-        <Card className="border-0 shadow-lg bg-white/80 backdrop-blur-sm">
+        <Card className="border-0 shadow-lg bg-white/80 backdrop-blur-sm dark:text-black">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Database className="h-5 w-5" />
+              <Database className="h-5 w-5 " />
               Data Management
             </CardTitle>
-            <CardDescription>Control your mood tracking data and account</CardDescription>
+            <CardDescription className="dark:text-black">
+              Control your mood tracking data and account
+            </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="flex items-center justify-between p-4 border rounded-lg">
@@ -169,10 +203,12 @@ export default function PrivacySecurityPage() {
                 <Download className="h-5 w-5 text-blue-600" />
                 <div>
                   <h4 className="font-medium">Export Your Data</h4>
-                  <p className="text-sm text-muted-foreground">Download all your mood entries and insights</p>
+                  <p className="text-sm text-muted-foreground">
+                    Download all your mood entries and insights
+                  </p>
                 </div>
               </div>
-              <Button variant="outline" size="sm">
+              <Button className="dark:text-white" variant="outline" size="sm">
                 Export
               </Button>
             </div>
@@ -182,7 +218,9 @@ export default function PrivacySecurityPage() {
                 <Trash2 className="h-5 w-5 text-red-600" />
                 <div>
                   <h4 className="font-medium">Delete Account</h4>
-                  <p className="text-sm text-muted-foreground">Permanently remove your account and all data</p>
+                  <p className="text-sm text-muted-foreground">
+                    Permanently remove your account and all data
+                  </p>
                 </div>
               </div>
               <Button variant="destructive" size="sm">
@@ -193,11 +231,12 @@ export default function PrivacySecurityPage() {
             <Separator />
 
             <div className="text-center text-sm text-muted-foreground">
-              Your privacy is our priority. We follow strict data protection standards.
+              Your privacy is our priority. We follow strict data protection
+              standards.
             </div>
           </CardContent>
         </Card>
       </div>
     </div>
-  )
+  );
 }

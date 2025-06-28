@@ -80,9 +80,11 @@ export default function AppearancePage() {
               <div className="p-2 bg-purple-500 rounded-lg">
                 <Palette className="h-6 w-8 text-white" />
               </div>
-              <h1 className="text-3xl font-bold tracking-tight ">Appearance</h1>
+              <h1 className=" text-xl md:text-3xl font-bold tracking-tight ">
+                Appearance
+              </h1>
             </div>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground ">
               Customize how your mood tracker looks and feels
             </p>
           </div>
@@ -113,7 +115,9 @@ export default function AppearancePage() {
 
         {/* Theme Options */}
         <div className="space-y-4 mb-8">
-          <h2 className="text-xl font-semibold px-2">Choose Your Theme</h2>
+          <h2 className="text-lg md:text-xl font-semibold px-2">
+            Choose Your Theme
+          </h2>
 
           {themeOptions.map((option) => (
             <Card
@@ -125,17 +129,17 @@ export default function AppearancePage() {
               }`}
               onClick={() => setTheme(option.value)}
             >
-              <CardContent className="p-6">
+              <CardContent className="p-4  md:p-6">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
                     <div className={`p-3 rounded-xl ${option.color}`}>
                       <div className="text-white">{option.icon}</div>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">
+                      <h3 className="font-semibold text-gray-900 group-hover:text-purple-600 transition-colors text-sm md:text-base ">
                         {option.name}
                       </h3>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-[0.80rem] md:text-sm  text-gray-600">
                         {option.description}
                       </p>
                     </div>

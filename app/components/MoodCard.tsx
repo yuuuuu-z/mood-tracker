@@ -53,7 +53,7 @@ const MoodCard = () => {
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center items-center">
       <div className="flex flex-col justify-center items-center text-center w-[350px] rounded-3xl my-10 border shadow-md">
         <div className="w-full h-[150px] relative">
           <Image

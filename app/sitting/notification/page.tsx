@@ -114,7 +114,7 @@ export default function NotificationPage() {
   }
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-visible relative z-0">
+    <div className=" overflow-visible relative z-0">
       <div className="max-w-2xl mx-auto px-4 py-6">
         {/* Header */}
         <div className="mb-8">
@@ -124,7 +124,7 @@ export default function NotificationPage() {
               <div className="p-2 bg-blue-500 rounded-lg">
                 <Bell className="h-6 w-8 text-white" />
               </div>
-              <h1 className="text-3xl font-bold tracking-tight text-gray-900">
+              <h1 className="text-xl md:text-3xl font-bold tracking-tight">
                 Notifications
               </h1>
             </div>
@@ -163,7 +163,7 @@ export default function NotificationPage() {
 
         {/* Notification Settings */}
         <div className="space-y-4 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 px-2">
+          <h2 className="text-xl font-semibold  px-2">
             Notification Preferences
           </h2>
 
@@ -198,7 +198,7 @@ export default function NotificationPage() {
         </div>
 
         {/* Reminder Time Select */}
-        <Card className="border-0 shadow-lg bg-white/90 ">
+        <Card className="border-0 shadow-lg bg-white/90 dark:text-black ">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Clock className="h-5 w-5" />

@@ -77,7 +77,7 @@ export default function LanguageRegionPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
+    <div className="min-h-screen ">
       <div className="max-w-2xl mx-auto px-4 py-6">
         {/* Header */}
         <div className="mb-8">
@@ -87,7 +87,7 @@ export default function LanguageRegionPage() {
               <div className="p-2 bg-green-500 rounded-lg">
                 <Globe className="h-6 w-8 text-white" />
               </div>
-              <h1 className="text-3xl font-bold tracking-tight text-gray-900">
+              <h1 className="text-xl md:text-3xl font-bold tracking-tight">
                 Language & Region
               </h1>
             </div>
@@ -123,7 +123,7 @@ export default function LanguageRegionPage() {
         </Card>
 
         {/* Language Settings */}
-        <Card className="mb-6 border-0 shadow-md bg-white/80 backdrop-blur-sm">
+        <Card className="mb-6 border-0 shadow-md bg-white/80 backdrop-blur-sm dark:text-black">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Languages className="h-5 w-5" />
@@ -158,7 +158,7 @@ export default function LanguageRegionPage() {
         </Card>
 
         {/* Region Settings */}
-        <Card className="mb-6 border-0 shadow-md bg-white/80 backdrop-blur-sm">
+        <Card className="mb-6 border-0 shadow-md bg-white/80 backdrop-blur-sm  dark:text-black">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Flag className="h-5 w-5" />
@@ -193,7 +193,7 @@ export default function LanguageRegionPage() {
         </Card>
 
         {/* Timezone Settings */}
-        <Card className="mb-6 border-0 shadow-md bg-white/80 backdrop-blur-sm">
+        <Card className="mb-6 border-0 shadow-md bg-white/80 backdrop-blur-sm  dark:text-black">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Clock className="h-5 w-5" />
@@ -225,7 +225,7 @@ export default function LanguageRegionPage() {
         </Card>
 
         {/* Date Format */}
-        <Card className="border-0 shadow-lg bg-white/80 backdrop-blur-sm">
+        <Card className="border-0 shadow-lg bg-white/80 backdrop-blur-sm  dark:text-black">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Calendar className="h-5 w-5" />

@@ -17,35 +17,30 @@
       "static/css/app/page.css",
       "static/chunks/app/page.js"
     ],
-    "/success/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/success/page.js"
-    ],
-    "/mood_history/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/mood_history/page.js"
-    ],
-    "/upgrade/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/upgrade/page.js"
-    ],
     "/sitting/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/sitting/page.js"
+    ],
+    "/sitting/appearance/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/sitting/appearance/page.js"
+    ],
+    "/sitting/notification/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/sitting/notification/page.js"
     ],
     "/sitting/language/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/sitting/language/page.js"
     ],
-    "/sitting/notification/page": [
+    "/sitting/privacy/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/sitting/notification/page.js"
+      "static/chunks/app/sitting/privacy/page.js"
     ]
   }
 }
