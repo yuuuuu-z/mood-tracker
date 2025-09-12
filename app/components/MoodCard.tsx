@@ -18,6 +18,7 @@ const MoodCard = () => {
   const router = useRouter();
   const dispatch = useDispatch();
   const { user } = useUser();
+
   const [selectedMood, setSelectedMood] = useState<Mood | null>(null);
   const [showModal, setShowModal] = useState(false);
   const [note, setNote] = useState("");
@@ -48,7 +49,8 @@ const MoodCard = () => {
       );
       setShowModal(false);
       setNote("");
-      router.push("/mood_history");
+      // Redirect to mood history with quote parameter
+      router.push("/mood_history?showQuote=1");
     }
   };
 
@@ -84,15 +86,16 @@ const MoodCard = () => {
             ))}
           </div>
 
+          {/* Mood note modal */}
           {showModal && selectedMood && (
-            <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
               <div className="bg-white dark:bg-black p-6 rounded-lg shadow-lg w-80 dark:text-white">
-                <h3 className="text-lg font-semibold mb-2 dark:text-white">
+                <h3 className="text-lg font-semibold mb-2">
                   Are you feeling {selectedMood.label} {selectedMood.emoji}{" "}
                   today?
                 </h3>
                 <textarea
-                  className="w-full p-2 border rounded-md"
+                  className="w-full p-2 border rounded-md dark:text-black"
                   placeholder="Write a short message..."
                   value={note}
                   onChange={(e) => setNote(e.target.value)}
