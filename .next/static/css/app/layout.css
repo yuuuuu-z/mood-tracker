@@ -854,9 +854,6 @@ video {
 .mr-2 {
   margin-right: 0.5rem;
 }
-.mt-10 {
-  margin-top: 2.5rem;
-}
 .mt-12 {
   margin-top: 3rem;
 }
@@ -1119,9 +1116,6 @@ video {
 }
 .animate-spin {
   animation: spin 1s linear infinite;
-}
-.animate-\[fadeIn_2s_ease-in-out_forwards\] {
-  animation: fadeIn 2s ease-in-out forwards;
 }
 .cursor-default {
   cursor: default;
@@ -1951,9 +1945,6 @@ video {
 .duration-300 {
   transition-duration: 300ms;
 }
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 @keyframes enter {
 
   from {
@@ -1968,17 +1959,11 @@ video {
     transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0));
   }
 }
-.fade-in {
-  --tw-enter-opacity: 0;
-}
 .duration-200 {
   animation-duration: 200ms;
 }
 .duration-300 {
   animation-duration: 300ms;
-}
-.ease-in-out {
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {

@@ -12,7 +12,7 @@ export default function Docks() {
 
   const links = [
     { name: "Home", icon: <GoHome />, herf: "/" },
-    { name: "Check In", icon: <LucidePackageCheck />, herf: "/check_in" },
+    // { name: "Check In", icon: <LucidePackageCheck />, herf: "/check_in" },
     { name: "History", icon: <GoHistory />, herf: "/mood_history" },
     { name: "Settings", icon: <TiCogOutline />, herf: "/sitting" },
   ];

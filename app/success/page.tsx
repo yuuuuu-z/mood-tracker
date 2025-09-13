@@ -2,6 +2,7 @@ import { CircleCheck } from "lucide-react";
 import BackBtn from "../components/BackBtn";
 import { ConfettiDemo } from "../components/ConfettiDemo";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function SuccessPage() {
   return (
